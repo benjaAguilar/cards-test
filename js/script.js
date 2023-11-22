@@ -40,7 +40,7 @@ getCard.addEventListener("click", function(){
         suit = getSuit();
         number = getRandomNum(0, deckOfCards[suit].length - 1);
 
-    } while(deckOfCards[suit].length - 1 === -1);
+    } while(deckOfCards[suit].length === 0);
    
     console.log("you get a: " + deckOfCards[suit][number] + " of " + suit);
     deckOfCards[suit].splice(number, 1);
