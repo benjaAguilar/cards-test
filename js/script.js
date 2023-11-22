@@ -1,9 +1,9 @@
 
 let deckOfCards = {
-   "diamonds": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "j", "q", "k"],
-   "hearts": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "j", "q", "k"],
-   "spades": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "j", "q", "k"],
-   "clubs": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "j", "q", "k"],
+   "diamonds": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "J", "Q", "K"],
+   "hearts": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "J", "Q", "K"],
+   "spades": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "J", "Q", "K"],
+   "clubs": ["as", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "J", "Q", "K"],
 }
 
 let getCard = document.querySelector("#get-card");
@@ -28,7 +28,7 @@ function getSuit(){
         case 4:
             suit = "clubs"
         break;
-    }
+    }   
     return suit;
 }
 
