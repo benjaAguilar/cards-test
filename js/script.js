@@ -33,5 +33,15 @@ function getSuit(){
 }
 
 getCard.addEventListener("click", function(){
-    
+    let suit;
+    let number;
+
+    do{
+        suit = getSuit();
+        number = getRandomNum(0, deckOfCards[suit].length - 1);
+
+    } while(deckOfCards[suit].length - 1 === -1);
+   
+    console.log("you get a: " + deckOfCards[suit][number] + " of " + suit);
+    deckOfCards[suit].splice(number, 1);
 });
