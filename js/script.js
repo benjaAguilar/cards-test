@@ -40,8 +40,16 @@ getCard.addEventListener("click", function(){
         suit = getSuit();
         number = getRandomNum(0, deckOfCards[suit].length - 1);
 
+        if(deckOfCards.diamonds.length &&
+            deckOfCards.hearts.length &&
+            deckOfCards.spades.length && 
+            deckOfCards.clubs.length === 0){
+                getCard.disabled = "true";
+                break;
+            }
+
     } while(deckOfCards[suit].length === 0);
-   
+
     console.log("you get a: " + deckOfCards[suit][number] + " of " + suit);
     deckOfCards[suit].splice(number, 1);
 });
