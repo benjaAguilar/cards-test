@@ -109,6 +109,13 @@ getCard.addEventListener("click", function(){
 
     } while(deckOfCards[suit].length === 0);
 
-    console.log("you get a: " + deckOfCards[suit][number] + " of " + suit);
+    let card = Object.keys(deckOfCards[suit][number]);
+    let gameTable = document.querySelector(".game-table");
+    let img = document.createElement("img");
+
+    img.src = deckOfCards[suit][number][card].img;
+    gameTable.appendChild(img);
+
+    console.log("you get a: " + card + " of " + suit);
     deckOfCards[suit].splice(number, 1);
 });
