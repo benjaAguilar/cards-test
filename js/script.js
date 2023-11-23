@@ -113,6 +113,7 @@ getCard.addEventListener("click", function(){
     let gameTable = document.querySelector(".game-table");
     let img = document.createElement("img");
 
+    img.classList.add("card");
     img.src = deckOfCards[suit][number][card].img;
     gameTable.appendChild(img);
 
